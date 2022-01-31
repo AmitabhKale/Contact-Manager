@@ -5,6 +5,7 @@ import AddContact from './components/contacts/AddContact'
 import {Provider} from "./context";
 import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
 import About from "./components/pages/About";
+import EditContact from  './components/contacts/EditContact'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Contacts} />
           <Route exact path='/contacts/add' component={AddContact} />
+          <Route exact path='/contacts/edit/:id' component={EditContact} />
           <Route exact path='/about' component={About} />
         </Switch>
         </div>
